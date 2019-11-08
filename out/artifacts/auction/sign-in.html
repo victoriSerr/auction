@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <script type='text/html' src='main.html'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#header").load("main.html #main_header");
+            $("#footer").load("main.html #main_footer");
+        });
+    </script>
+    <meta charset="UTF-8">
+    <title>Вход</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<div id="header"></div>
+
+<div class="main_part">
+    <div class="jumbotron jumbotron-fluid">
+        <form class="main_part_sign-in" style="align-items: center">
+            <div class="form-group">
+                <label for="email/login">Email address</label>
+                <input type="email" class="form-control" id="email/login"
+                       placeholder="Email / login">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password">
+            </div>
+            <p>
+                <a href="/" style="color: rgba(0,0,0,0.5)">Забыли пароль?</a>
+            </p>
+            <p>
+                <button type="submit" class="btn btn-primary" style="display: inline-flex">Войти</button>
+                <button type="submit" class="btn btn-primary" style="background-color: green">Регистрация</button>
+            </p>
+        </form>
+    </div>
+</div>
+<div id="footer"></div>
+</body>
+</html>
