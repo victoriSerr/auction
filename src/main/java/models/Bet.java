@@ -1,16 +1,24 @@
 package models;
 
+import java.sql.Timestamp;
 import java.util.Date;
 
 public class Bet {
     private Long id;
     private Long lotId;
-    private Date date;
+    private Timestamp date;
     private Long pBuyerId;
     private Long betValue;
 
-    public Bet(Long id, Long lotId, Date date, Long pBuyerId, Long betValue) {
+    public Bet(Long id, Long lotId, Timestamp date, Long pBuyerId, Long betValue) {
         this.id = id;
+        this.lotId = lotId;
+        this.date = date;
+        this.pBuyerId = pBuyerId;
+        this.betValue = betValue;
+    }
+
+    public Bet(Long lotId, Timestamp date, Long pBuyerId, Long betValue) {
         this.lotId = lotId;
         this.date = date;
         this.pBuyerId = pBuyerId;
@@ -35,11 +43,11 @@ public class Bet {
         return this;
     }
 
-    public Date getDate() {
+    public Timestamp getDate() {
         return date;
     }
 
-    public Bet setDate(Date date) {
+    public Bet setDate(Timestamp date) {
         this.date = date;
         return this;
     }

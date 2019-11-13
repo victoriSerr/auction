@@ -2,16 +2,24 @@ package models;
 
 
 import java.sql.Array;
+import java.util.ArrayList;
 
 public class Product {
     private Long id;
     private Long price;
-    private Array images;
+    private ArrayList<String> images;
     private String name;
     private String description;
 
-    public Product(Long id, Long price, Array images, String name, String description) {
+    public Product(Long id, Long price, ArrayList<String> images, String name, String description) {
         this.id = id;
+        this.price = price;
+        this.images = images;
+        this.name = name;
+        this.description = description;
+    }
+
+    public Product(Long price, ArrayList<String> images, String name, String description) {
         this.price = price;
         this.images = images;
         this.name = name;
@@ -36,11 +44,11 @@ public class Product {
         return this;
     }
 
-    public Array getImages() {
+    public ArrayList<String> getImages() {
         return images;
     }
 
-    public Product setImages(Array images) {
+    public Product setImages(ArrayList<String> images) {
         this.images = images;
         return this;
     }

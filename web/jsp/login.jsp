@@ -51,7 +51,7 @@
                 %>
 
                 <label for="login">Email address / login</label>
-                <input type="text" class="form-control" name="login" id="login" placeholder="<%=login!=null?login:"Email / login"%>">
+                <input type="text" class="form-control" name="login" id="login" <%if (login != null) {%> value="<%=login%>" <%}%> placeholder="Email / login" >
                 <small id="emailHelp"  style="color: darkred">
                     <% Object s = request.getSession().getAttribute("wrongLogin");
                         if (s != null) {%><%=s%>

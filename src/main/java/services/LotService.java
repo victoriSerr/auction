@@ -3,10 +3,17 @@ package services;
 import models.Lot;
 
 import java.util.List;
+import java.util.Optional;
 
 public class LotService {
     private ConnectBd connectBd = new ConnectBd();
     private List<Lot> lotWithProduct;
+
+    public Lot findLotById(Long id) {
+        Lot lot = connectBd.lotRepository.find(id).get();
+        lot.setProduct(connectBd.productRepository.find(lot.getProductId()).get());
+        return lot;
+    }
 
     public List<Lot> getLotWithProduct() {
         findProducts();
@@ -20,5 +27,19 @@ public class LotService {
                 lot.setProduct(connectBd.productRepository.find(lot.getProductId()).get());
             }
         }
+    }
+
+    public Lot findLotByHash(int hashId) {
+        List<Lot> lots = getLotWithProduct();
+        for (Lot lot : lots) {
+            if (lot.getId().hashCode() == hashId) {
+                return lot;
+            }
+        }
+        return null;
+    }
+
+    public void save (Lot lot) {
+        connectBd.lotRepository.save(lot);
     }
 }

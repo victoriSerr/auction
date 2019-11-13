@@ -30,6 +30,7 @@
 <div class="main_part" style="height: 90%">
     <div class="jumbotron jumbotron-fluid">
         <form class="main_part_sign-in" method="post" style="width: 500px; padding: 105px 15px; margin: auto;">
+            <h1 style="text-align: center">Registration</h1>
             <div class="form-group">
 
                 <label for="login">Login</label><input type="text" class="form-control"  id="login" name="login" required>

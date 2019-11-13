@@ -1,4 +1,7 @@
-<%--
+<%@ page import="models.Bet" %>
+<%@ page import="services.BetService" %>
+<%@ page import="services.LotService" %>
+<%@ page import="models.Lot" %><%--
   Created by IntelliJ IDEA.
   User: victory
   Date: 07.11.2019
@@ -30,10 +33,13 @@
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        input:invalid {
+            border: 2px red
+        }
+    </style>
 </head>
 <body>
-
-
 <div id="header"></div>
 
 <div class="main_part" style="position: relative; width: 90%; height: 90%; top: 102px; margin: auto">
@@ -44,23 +50,36 @@
         <div class="row featurette" style="height: 70%; width: 100%; margin: auto">
             <div class="col-md-7 order-md-2">
 
-                <p>Текущая цена:</p>
-                <input type="text" name="bet">
-                <input type="button" value="Сделать савку">
-            </div>
+                <%String s = request.getSession().getAttribute("currentPrice") != null ? request.getSession().getAttribute("currentPrice").toString() : ((Lot) request.getSession().getAttribute("lot")).getProduct().getPrice().toString();%>
+                <p>Текущая цена:<%=s%>
+                </p>
 
+                <form method="get">
+                    <input type="number" name="bet" required value="<%=Long.parseLong(s) + 1%>">
+                    <button type="submit"  <%if (request.getSession().getAttribute("isSignIn") == null) {%>
+                            formaction="${pageContext.request.contextPath}/login" <%} else {%>
+                            onClick="window.location.reload()"<%}%>>Сделать ставку
+                    </button>
+                </form>
+                <p></p>
+            </div>
             <div class="col-md-5 order-md-1" style="border-right-style: groove">
                 <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner" style="height: 100%; background-color: darkgray">
+
+                        <% Lot lot =(Lot) request.getSession().getAttribute("lot");%>
+
                         <div class="carousel-item active" data-interval="100000000000000000">
                             <div class="d-block w-100"
-                                 style="height: 100%; background: url(<%=request.getContextPath()%>/images/logo1.jpeg) no-repeat center;"></div>
+                                 style="height: 100%; background: url('<%=request.getContextPath()%>/uploads/<%=lot.getProduct().getImages().get(0)%>') no-repeat center; background-size: contain"></div>
                         </div>
 
-                        <div class="carousel-item "  data-interval="100000000000000000">
+                        <%for (String fileName : lot.getProduct().getImages().subList(1, lot.getProduct().getImages().size())) {%>
+                        <div class="carousel-item " data-interval="100000000000000000">
                             <div class="d-block w-100"
-                                 style="height: 100%; background: url(<%=request.getContextPath()%>/images/logo.png) no-repeat center;"></div>
+                                 style="height: 100%; background: url('<%=request.getContextPath()%>/uploads/<%=fileName%>') no-repeat center; background-size: contain"></div>
                         </div>
+                        <%}%>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>

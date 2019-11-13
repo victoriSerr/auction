@@ -2,6 +2,7 @@ package models;
 
 import repositories.LotRepository;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 public class Lot {
@@ -9,15 +10,26 @@ public class Lot {
     private Long ownerId;
     private Boolean status;
     private Long buyerId;
-    private String startDate;
-    private String finishDate;
+    private Timestamp startDate;
+    private Timestamp finishDate;
     private Boolean transactionStatus;
     private Long productId;
     private Product product;
 
-    public Lot(Long id, Long ownerId,  Boolean status, Long buyerId,
-               String startDate, String finishDate, Boolean transactionStatus, Long productId) {
+    public Lot(Long id, Long ownerId, Boolean status, Long buyerId,
+               Timestamp startDate, Timestamp finishDate, Boolean transactionStatus, Long productId) {
         this.id = id;
+        this.ownerId = ownerId;
+        this.status = status;
+        this.buyerId = buyerId;
+        this.startDate = startDate;
+        this.finishDate = finishDate;
+        this.transactionStatus = transactionStatus;
+        this.productId = productId;
+    }
+
+    public Lot(Long ownerId, Boolean status, Long buyerId,
+               Timestamp startDate, Timestamp finishDate, Boolean transactionStatus, Long productId) {
         this.ownerId = ownerId;
         this.status = status;
         this.buyerId = buyerId;
@@ -63,20 +75,20 @@ public class Lot {
         return this;
     }
 
-    public String getStartDate() {
+    public Timestamp getStartDate() {
         return startDate;
     }
 
-    public Lot setStartDate(String startDate) {
+    public Lot setStartDate(Timestamp startDate) {
         this.startDate = startDate;
         return this;
     }
 
-    public String getFinishDate() {
+    public Timestamp getFinishDate() {
         return finishDate;
     }
 
-    public Lot setFinishDate(String finishDate) {
+    public Lot setFinishDate(Timestamp finishDate) {
         this.finishDate = finishDate;
         return this;
     }

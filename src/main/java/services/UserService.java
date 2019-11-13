@@ -20,4 +20,8 @@ public class UserService {
         return false;
     }
 
+    public User findUserByLogin (String login) {
+        return connectBd.userRepository.findByLogin(login);
+    }
+
 }

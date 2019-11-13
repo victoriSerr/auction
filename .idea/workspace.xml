@@ -105,7 +105,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="Web Contexts" />
@@ -236,12 +236,7 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@87641670" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@87641670" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@befd78" type="9fbbdea:ServiceModel$ServiceNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@860fcb8d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -280,10 +275,24 @@
       <workItem from="1573111392929" duration="3508000" />
       <workItem from="1573137517239" duration="19398000" />
       <workItem from="1573198275649" duration="3983000" />
+      <workItem from="1573202858041" duration="719000" />
+      <workItem from="1573377106315" duration="14567000" />
+      <workItem from="1573463249820" duration="3270000" />
+      <workItem from="1573555937853" duration="18382000" />
+      <workItem from="1573581614899" duration="1488000" />
+      <workItem from="1573633524402" duration="7942000" />
+      <workItem from="1573667298680" duration="2852000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
+        <watch expression="betService" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
