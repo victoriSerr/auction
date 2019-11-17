@@ -1,7 +1,5 @@
-<%@ page import="models.Bet" %>
-<%@ page import="services.BetService" %>
-<%@ page import="services.LotService" %>
-<%@ page import="models.Lot" %><%--
+<%@ page import="models.Lot" %>
+<%--
   Created by IntelliJ IDEA.
   User: victory
   Date: 07.11.2019
@@ -33,6 +31,27 @@
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design for Bootstrap</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="../img/mdb-favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="../css/mdb.min.css">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="../css/style.css">
     <style>
         input:invalid {
             border: 2px red
@@ -42,8 +61,7 @@
 <body>
 <div id="header"></div>
 
-<div class="main_part" style="position: relative; width: 90%; height: 90%; top: 102px; margin: auto">
-
+<main>
     <div class="container" style="background: #2332;
     padding-bottom: 15px;
     padding-top: 15px;">
@@ -67,7 +85,7 @@
                 <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner" style="height: 100%; background-color: darkgray">
 
-                        <% Lot lot =(Lot) request.getSession().getAttribute("lot");%>
+                        <% Lot lot = (Lot) request.getSession().getAttribute("lot");%>
 
                         <div class="carousel-item active" data-interval="100000000000000000">
                             <div class="d-block w-100"
@@ -95,7 +113,7 @@
         </div>
     </div>
 
-</div>
+</main>
 
 <div id="footer"></div>
 

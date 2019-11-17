@@ -22,36 +22,63 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design for Bootstrap</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="../img/mdb-favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="../css/mdb.min.css">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
 <div id="header"></div>
 
-<div class="main_part" style="height: 90%">
-    <div class="jumbotron jumbotron-fluid">
-        <form class="main_part_sign-in" method="post" style="width: 500px; padding: 105px 15px; margin: auto;">
+<main>
+    <div class="jumbotron jumbotron-fluid" align="center">
+        <form method="post">
             <h1 style="text-align: center">Registration</h1>
             <div class="form-group">
 
-                <label for="login">Login</label><input type="text" class="form-control"  id="login" name="login" required>
+                <label for="login">Login</label>
+                <input type="text" class="form-control col-lg-4 col-lg-offset-4" id="login" name="login"
+                       placeholder="Login"
+                       required>
             </div>
             <div class="form-group">
 
-                <label for="email">Email</label><input type="email" class="form-control" id="email" name="email">
+                <label for="email">Email</label>
+                <input type="email" class="form-control col-lg-4 col-lg-offset-4" id="email" name="email"
+                       placeholder="Email">
             </div>
             <div class="form-group">
-                <label for="password1">Пароль</label><input type="password" class="form-control" id="password1"
-                                                            name="password1">
+                <label for="password1">Password</label>
+                <input type="password" class="form-control col-lg-4 col-lg-offset-4" id="password1"
+                       placeholder="Password"
+                       name="password1">
             </div>
-<%--            <div class="form-group">--%>
-<%--                <label for="password2">Повторите пароль</label><input type="password" class="form-control is-invalid"--%>
-<%--                                                                      id="password2" name="password2">--%>
-<%--            </div>--%>
+            <%--            <div class="form-group">--%>
+            <%--                <label for="password2">Повторите пароль</label><input type="password" class="form-control is-invalid"--%>
+            <%--                                                                      id="password2" name="password2">--%>
+            <%--            </div>--%>
             <button type="submit" class="btn btn-primary">Регистрация</button>
         </form>
     </div>
-</div>
-
+</main>
 
 
 <div id="footer"></div>

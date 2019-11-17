@@ -1,27 +1,14 @@
-html, body {
-    height: 100%
-}
-
+html,
 body {
-    display: block;
-    box-sizing: border-box;
+    height: 100%;
+}
+header {
+    height: 10%;
+}
+main {
+    min-height: 65%;
 }
 
-
-.header {
-    background-color: black;
-    top: 0;
-    left: 0;
-    position: relative;
-    right: 0;
-    color: white;
-}
-
-.footer {
-    background-color: black;
-    position: relative;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
+.background-add-lot {
+    background-color: gray;
 }
