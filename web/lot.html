@@ -14,53 +14,101 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design for Bootstrap</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-
-<div id="header"></div>
-<div class="main_part">
-    <div class="bd-example">
-        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="..." class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                    </div>
+<header id="header"></header>
+<main>
+    <div class="container" style="background: #2332;
+    padding-bottom: 15px;
+    padding-top: 15px;">
+        <div class="row featurette" style="height: 70%; width: 100%; margin: auto">
+            <div class="col-md-7 order-md-2">
+                <div id="lot_name" style="text-align: center">
+                    <span>Product Name</span>
+                    <hr>
                 </div>
-                <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Second slide label</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
+                <!--                <%String s = request.getSession().getAttribute("currentPrice") != null ?-->
+                <!--                request.getSession().getAttribute("currentPrice").toString() : ((Lot)-->
+                <!--                request.getSession().getAttribute("lot")).getProduct().getPrice().toString();%>-->
+                <p>
+                    Текущая ставка: 0<!--<%=s%>--> &#8381;
+                </p>
+
+                <form method="get">
+                    <label for="bet_input">Минимальная ставка : </label>
+                    <input id='bet_input' type="number" name="bet" required value="<%=Long.parseLong(s) + 1%>">
+                    <button type="submit" class="btn btn-orange">
+                        <!--                    <%if (request.getSession().getAttribute("isSignIn") == null) {%>-->
+                        <!--                    formaction="${pageContext.request.contextPath}/login" <%} else {%>-->
+                        <!--                    onClick="window.location.reload()"<%}%>>--> Сделать ставку
+                    </button>
+                </form>
+                <hr>
+                <div style="text-align: center;">
+                    <span id="lot_description">
+                        Lacus vel facilisis volutpat est velit egestas dui id ornare. In hendrerit gravida rutrum quisque non. Sit amet nulla facilisi morbi tempus iaculis urna id. Dictum at tempor commodo ullamcorper a lacus vestibulum sed arcu. Eu non diam phasellus vestibulum lorem. Cursus risus at ultrices mi. Gravida rutrum quisque non tellus orci ac. Lacus sed turpis tincidunt id aliquet risus feugiat in ante. Felis imperdiet proin fermentum leo vel orci porta. Gravida in fermentum et sollicitudin ac orci phasellus egestas tellus. Mattis molestie a iaculis at. Vulputate dignissim suspendisse in est ante in nibh mauris. Semper auctor neque vitae tempus quam pellentesque. Amet consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Erat nam at lectus urna duis convallis. Erat nam at lectus urna duis convallis convallis. Ut tortor pretium viverra suspendisse. Lacus luctus accumsan tortor posuere ac ut. Massa eget egestas purus viverra accumsan in nisl nisi scelerisque.
+                     </span>
                 </div>
-                <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Third slide label</h5>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                    </div>
+                <hr>
+                <div>
+                    <span>
+                        <p>
+                            <b>Сделано ставок : <%COUNT%></b> крайняя ставка от <%NICKNAME%>
+                        </p>
+                        <p>
+                            <span style="color: red"> <%TIME%> до окончания </span>
+                            (<%DATE AND TIME OF END%>)
+                        </p>
+                    </span>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+            <div class="col-md-5 order-md-1" style="border-right-style: groove">
+                <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner" style="height: 100%; background-color: darkgray">
+
+                        <!--                        <% Lot lot = (Lot) request.getSession().getAttribute("lot");%>-->
+
+                        <div class="carousel-item active" data-interval="100000000000000000">
+                            <div class="d-block w-100"
+                                 style="height: 100%; background: url('<%=request.getContextPath()%>/uploads/<%=lot.getProduct().getImages().get(0)%>') no-repeat center; background-size: contain"></div>
+                        </div>
+
+                        <!--                        <%for (String fileName : lot.getProduct().getImages().subList(1,-->
+                        <!--                        lot.getProduct().getImages().size())) {%>-->
+                        <div class="carousel-item " data-interval="100000000000000000">
+                            <div class="d-block w-100"
+                                 style="height: 100%; background: url('<%=request.getContextPath()%>/uploads/<%=fileName%>') no-repeat center; background-size: contain"></div>
+                        </div>
+                        <!--                        <%}%>-->
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+
         </div>
     </div>
-</div>
-<div id="footer"></div>
+
+</main>
+<footer id="footer"></footer>
 </body>
 </html>
