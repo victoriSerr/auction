@@ -25,17 +25,27 @@ public class LotServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         LotService lotService = new LotService();
         BetService betService = new BetService();
+        UserService userService = new UserService();
         HttpSession session = req.getSession();
+
 
         String s = req.getRequestURI();
         String lotIdH = s.split("/")[s.split("/").length - 1];
-        System.out.println(lotIdH);
+//        System.out.println(lotIdH);
         Lot lot = lotService.findLotByHash(Integer.parseInt(lotIdH));
-        session.setAttribute("lot", lot);
 
+        Timestamp startDate = lot.getStartDate();
+        if (new Timestamp(new Date().getTime()).getTime() >= startDate.getTime()) {
+            session.setAttribute("timer", lot.getFinishDate().getTime() - lot.getStartDate().getTime());
+        } else {
+            session.setAttribute("notStart", startDate.getTime());
+        }
+        session.setAttribute("lot", lot);
 
         Bet betLatest = betService.findLatest(lot.getId());
         if (betLatest != null) {
+            User userWithLatestBet = userService.findUserById(betLatest.getpBuyerId());
+            session.setAttribute("userWithLatestBet", userWithLatestBet.getLogin());
             session.setAttribute("currentPrice", betService.findLatest(lot.getId()).getBetValue());
         }
 
@@ -56,7 +66,7 @@ public class LotServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        Integer bet = Integer.parseInt(req.getParameter("bet"));
-//        System.out.println(bet);
+
+
     }
 }

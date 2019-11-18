@@ -37,9 +37,9 @@ create table product
         constraint product_pk
             primary key,
     price       integer,
-    images      bytea,
     name        varchar,
-    description varchar(1000)
+    description varchar(1000),
+    images      character varying[]
 );
 
 alter table product
@@ -73,17 +73,17 @@ create unique index lot_id_uindex
 
 create table bet
 (
-    id         serial  not null
+    id         serial not null
         constraint bet_pk
             primary key,
     lot_id     bigint
         constraint lot_id
             references lot,
-    date       timestamp,
     p_buyer_id bigint
         constraint p_buyer_id
             references "user",
-    bet_val    integer not null
+    bet_val    bigint not null,
+    date       timestamp
 );
 
 alter table bet

@@ -34,15 +34,15 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Material Design for Bootstrap</title>
     <!-- MDB icon -->
-    <link rel="icon" href="../img/mdb-favicon.ico" type="image/x-icon">
+    <link rel="icon" href="<%=request.getContextPath()%>/img/mdb-favicon.ico" type="image/x-icon">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/bootstrap.min.css">
     <!-- Material Design Bootstrap -->
-    <link rel="stylesheet" href="../css/mdb.min.css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/mdb.min.css">
     <!-- Your custom styles (optional) -->
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/style.css">
 </head>
 <body>
 <div id="header"></div>
@@ -60,7 +60,7 @@
             <a href="${pageContext.request.contextPath}/"><span>Настройки</span></a>
             <hr>
             <form action="${pageContext.request.contextPath}/add-new-lot" style="padding: 5%; bottom: 0;">
-                <input type="button" class="btn btn-outline-primary waves-effect" value="Новый лот">
+                <input type="submit" class="btn btn-outline-primary waves-effect" value="Новый лот">
             </form>
         </div>
         <div class="col-10">
@@ -68,5 +68,7 @@
     </div>
 </main>
 <div id="footer"></div>
+
+
 </body>
 </html>

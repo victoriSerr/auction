@@ -32,15 +32,15 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Material Design for Bootstrap</title>
     <!-- MDB icon -->
-    <link rel="icon" href="../img/mdb-favicon.ico" type="image/x-icon">
+    <link rel="icon" href="<%=request.getContextPath()%>/img/mdb-favicon.ico" type="image/x-icon">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/bootstrap.min.css">
     <!-- Material Design Bootstrap -->
-    <link rel="stylesheet" href="../css/mdb.min.css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/mdb.min.css">
     <!-- Your custom styles (optional) -->
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/style.css">
     $('.alert').alert()
 </head>
 <body>
@@ -101,9 +101,8 @@
                 </div>
                 <br>
                 <input type="submit" value="save" class="btn btn-outline-primary waves-effect" formmethod="post"
-                       formaction="/add-new-lot"
+                       formaction="<%=request.getContextPath()%>/"
                        formenctype="multipart/form-data">
-
             </form>
         </div>
     </div>

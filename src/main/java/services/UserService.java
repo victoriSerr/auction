@@ -24,4 +24,7 @@ public class UserService {
         return connectBd.userRepository.findByLogin(login);
     }
 
+    public User findUserById (Long id ){
+        return connectBd.userRepository.find(id).get();
+    }
 }

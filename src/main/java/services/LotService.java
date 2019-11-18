@@ -2,6 +2,7 @@ package services;
 
 import models.Lot;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -23,6 +24,9 @@ public class LotService {
     private void findProducts() {
         lotWithProduct =  connectBd.lotRepository.findAll();
         for (Lot lot : lotWithProduct) {
+            if (lot.getFinishDate().before(new Date())) {
+                lot.setStatus(true);
+            }
             if (lot.getProduct() == null) {
                 lot.setProduct(connectBd.productRepository.find(lot.getProductId()).get());
             }

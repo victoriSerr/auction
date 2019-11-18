@@ -22,23 +22,53 @@
     </script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design for Bootstrap</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="<%=request.getContextPath()%>/img/mdb-favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/mdb.min.css">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/style.css">
 </head>
 <body>
 <div id="header"></div>
 
-<div class="main_part" style="position: relative; height: 90%; top: 62px; margin: auto">
-    hi,
-    <%= request.getSession().getAttribute("login") %>
-    <form action="${pageContext.request.contextPath}/logout" method="get">
+<main>
+    <div class="jumbotron-fluid row" style="padding: 5%">
 
-
-        <input type="submit" value="logout">
-    </form>
-
-    <a href="${pageContext.request.contextPath}/add-new-lot">Добавить новый лот</a>
-
-
-</div>
+        <div class="col-2 ">
+            <a href="${pageContext.request.contextPath}/"><span>Лоты</span></a>
+            <hr>
+            <a href="${pageContext.request.contextPath}/"><span>Ставки</span></a>
+            <hr>
+            <a href="${pageContext.request.contextPath}/"><span>Сообщения</span></a>
+            <hr>
+            <a href="${pageContext.request.contextPath}/"><span>Настройки</span></a>
+            <hr>
+            <form action="${pageContext.request.contextPath}/add-new-lot" style="padding: 5%; bottom: 0;">
+                <input type="submit" class="btn btn-outline-primary waves-effect" value="Новый лот">
+            </form>
+        </div>
+        <div class="col-10">
+        </div>
+    </div>
+</main>
 <div id="footer"></div>
+
+
 </body>
 </html>

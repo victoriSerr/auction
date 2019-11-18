@@ -6,7 +6,34 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c34771d-a556-4a96-a100-aafbb48c7532" name="Default Changelist" comment="" />
+    <list default="true" id="8c34771d-a556-4a96-a100-aafbb48c7532" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d9ca53fa-0d38-41a9-99cc-83fa811e9ffb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d9ca53fa-0d38-41a9-99cc-83fa811e9ffb.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d9ca53fa-0d38-41a9-99cc-83fa811e9ffb/storage_v2/_src_/database/project.GUuQ7Q/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d9ca53fa-0d38-41a9-99cc-83fa811e9ffb/storage_v2/_src_/database/project.GUuQ7Q/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auction.iml" beforeDir="false" afterPath="$PROJECT_DIR$/auction.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/create.sql" beforeDir="false" afterPath="$PROJECT_DIR$/create.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/auction/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/auction/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/auction/jsp/addLot.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/auction/jsp/addLot.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/auction/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/auction/jsp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/auction/jsp/lot.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/auction/jsp/lot.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/auction/jsp/lots.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/auction/jsp/lots.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/auction/jsp/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/auction/jsp/main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/auction/jsp/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/auction/jsp/profile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/auction/jsp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/auction/jsp/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/auction/lot.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/auction/lot.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/auction/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/auction/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/LotService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/LotService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/LotServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/LotServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/auction.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/jsp/addLot.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/addLot.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/jsp/lot.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/lot.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/jsp/lots.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/lots.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/jsp/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/jsp/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/profile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/jsp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/register.jsp" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,41 +56,6 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="project@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="project@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="project@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="project: database" type="162271b6:PgImplModel$Database" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="project@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="project: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="project@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="project: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="project@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="project: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
     </expand>
     <select />
   </component>
@@ -73,8 +65,12 @@
         <option value="HTML File" />
         <option value="Jsp File" />
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -97,7 +93,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Second Project/forumgame" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -147,8 +143,7 @@
       </method>
     </configuration>
     <configuration name="Tomcat 9.0.26" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.26" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/auction/" />
-      <option name="UPDATING_POLICY" value="restart-server" />
+      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
         <artifact name="auction">
           <settings>
@@ -282,11 +277,30 @@
       <workItem from="1573581614899" duration="1488000" />
       <workItem from="1573633524402" duration="7942000" />
       <workItem from="1573667298680" duration="2852000" />
+      <workItem from="1573670599024" duration="561000" />
+      <workItem from="1573671370971" duration="130000" />
+      <workItem from="1573717621244" duration="1816000" />
+      <workItem from="1574004990582" duration="3099000" />
+      <workItem from="1574061779748" duration="6411000" />
+      <workItem from="1574109302774" duration="8125000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
