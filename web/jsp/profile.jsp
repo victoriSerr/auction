@@ -1,4 +1,6 @@
-<%--
+<%@ page import="models.Message" %>
+<%@ page import="java.util.List" %>
+<%@ page import="services.UserService" %><%--
   Created by IntelliJ IDEA.
   User: victory
   Date: 27.10.2019
@@ -43,7 +45,19 @@
     <link rel="stylesheet" href="<%=request.getContextPath()%>/css/mdb.min.css">
     <!-- Your custom styles (optional) -->
     <link rel="stylesheet" href="<%=request.getContextPath()%>/css/style.css">
+
+    <script>
+        function showMessages() {
+            $.ajax({
+                url: 'messages',
+                success: function (responseText) {
+                    $('#messages').show();
+                }
+            })
+        }
+    </script>
 </head>
+
 <body>
 <div id="header"></div>
 
@@ -55,7 +69,7 @@
             <hr>
             <a href="${pageContext.request.contextPath}/"><span>Ставки</span></a>
             <hr>
-            <a href="${pageContext.request.contextPath}/"><span>Сообщения</span></a>
+            <a class="message" href="#" onclick="showMessages()"><span>Сообщения</span></a>
             <hr>
             <a href="${pageContext.request.contextPath}/"><span>Настройки</span></a>
             <hr>
@@ -63,9 +77,46 @@
                 <input type="submit" class="btn btn-outline-primary waves-effect" value="Новый лот">
             </form>
         </div>
-        <div class="col-10">
+        <div class="col-10" id="main_part">
+            <div id="messages" style="display: none">
+                <%
+                    List<Message> list = (List<Message>) request.getSession().getAttribute("messages"); request.getSession().removeAttribute("messages");
+                    if (list != null) {
+                        for (Message message : list) {
+                %>
+                <div class="media d-block d-md-flex mt-4">
+                    <div class="media-body text-center text-md-left ml-md-3 ml-0">
+                        <p class="font-weight-bold my-0">
+                            <%=new UserService().findUserById(message.getFromUserId()).getLogin()%>
+                            <a href="" class="pull-right ml-1">
+                                <i class="fas fa-reply"></i>
+                            </a>
+                        </p>
+                        <%=message.getMessage()%>
+                    </div>
+                </div>
+                <%
+                    }
+                } else {
+                %>
+                <p>Нет сообщений</p>
+                <%}%>
+            </div>
+
+            <%if (request.getSession().getAttribute("currLogin") != null) {%>
+            <div id="another_profile">
+                <p><%=request.getSession().getAttribute("currLogin")%> <%request.getSession().removeAttribute("currLogin");%>
+                </p>
+                <form method="post">
+                    <textarea name="message"></textarea>
+                    <input type="submit" value="Отправить сообщение" <%if (request.getSession().getAttribute("isSignIn") == null) {%>
+                           formaction="${pageContext.request.contextPath}/login" <%}%>>
+                </form>
+            </div>
+            <%}%>
         </div>
     </div>
+
 </main>
 <div id="footer"></div>
 

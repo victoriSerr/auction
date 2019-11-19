@@ -22,10 +22,11 @@ public class MainServlet extends HttpServlet {
         List<Lot> lots = lotService.getLotWithProduct();
         req.getSession().setAttribute("lots", lots);
         dispatcher.forward(req, resp);
+//        System.out.println(req.getSession().getAttribute("successR"));
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
+        req.getRequestDispatcher("/jsp/lots.jsp").forward(req, resp);
     }
 }

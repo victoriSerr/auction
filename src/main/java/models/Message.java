@@ -13,6 +13,12 @@ public class Message {
         this.message = message;
     }
 
+    public Message(Long fromUserId, Long toUserId, String message) {
+        this.fromUserId = fromUserId;
+        this.toUserId = toUserId;
+        this.message = message;
+    }
+
     public Long getId() {
         return id;
     }

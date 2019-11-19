@@ -1,9 +1,6 @@
 package services;
 
-import repositories.BetRepository;
-import repositories.LotRepository;
-import repositories.ProductRepository;
-import repositories.UserRepository;
+import repositories.*;
 import models.User;
 
 import java.io.FileReader;
@@ -18,6 +15,7 @@ public class ConnectBd {
     public LotRepository lotRepository;
     public ProductRepository productRepository;
     public BetRepository betRepository;
+    public MessageRepository messageRepository;
 
     public ConnectBd() {
         main();
@@ -47,6 +45,7 @@ public class ConnectBd {
         lotRepository = new LotRepository(connection);
         productRepository = new ProductRepository(connection);
         betRepository = new BetRepository(connection);
+        messageRepository = new MessageRepository(connection);
     }
 
 }

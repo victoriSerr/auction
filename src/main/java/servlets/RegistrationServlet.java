@@ -41,11 +41,12 @@ public class RegistrationServlet extends HttpServlet {
         String email = req.getParameter("email");
 
 
+        System.out.println(login);
         if (!userService.checkLogin(login) && login != null && hashPassword1 != null && email!= null) {
             userService.saveUser(new User(login, hashPassword1, email));
 
-            RequestDispatcher requestDispatcher = req.getRequestDispatcher("/succesReg.html");
-            requestDispatcher.forward(req, resp);
+            req.getSession().setAttribute("successR", Boolean.TRUE);
+            resp.sendRedirect(req.getContextPath() + "/");
         } else {
             RequestDispatcher requestDispatcher = req.getRequestDispatcher("/registration");
             requestDispatcher.forward(req, resp);

@@ -87,12 +87,13 @@
                 <form method="get">
                     <label for="bet_input">Минимальная ставка : </label>
 
-                    <input id='bet_input' type="number" name="bet" required value="<%=Long.parseLong(s) + 1%>"
+                    <input id='bet_input' type="number" name="bet" class="form-control" required
+                           value="<%=Long.parseLong(s) + 1%>"
                            min="<%=Long.parseLong(s) + 1%>">
-                    <button type="submit"
+                    <button type="submit" id="betBtn"
                             class="btn btn-orange" <%if (request.getSession().getAttribute("isSignIn") == null) {%>
                             formaction="${pageContext.request.contextPath}/login" <%} else {%>
-                            onClick="window.location.reload()"<%}%>>Сделать ставку
+                            onClick="window.location.reload()"<%}%> >Сделать ставку
                     </button>
                 </form>
                 <hr>
@@ -102,8 +103,11 @@
                      </span>
                 </div>
                 <hr>
+
                 <div>
-                    <span> крайняя ставка от <%=request.getSession().getAttribute("userWithLatestBet")%> <%request.getSession().removeAttribute("userWithLatestBet");%>
+                    <span> крайняя ставка от <a
+                            href="${pageContext.request.contextPath}/user/<%=request.getSession().getAttribute("userWithLatestBet")%>"><%=request.getSession().getAttribute("userWithLatestBet")%> </a>
+                        <%request.getSession().removeAttribute("userWithLatestBet");%>
                             <span style="color: red">
                                 <div class="countdown">
                                     <span class="days">00</span>
@@ -117,11 +121,12 @@
                                 </div>
                                     <script type="text/javascript">
                                     $('.countdown').downCount({
-                                            date: deadline,
+                                            date: deadline
                                         },
                                         function () {
                                             /* действие после завершения таймера */
-                                            alert("Время истекло!");
+                                            $('#bet_input').removeAttr("value").addClass("disabled").attr("disabled", 'disabled');
+                                            $('#betBtn').attr("disabled", 'disabled');
                                         });
                                     </script>
                             </span>(<%=lot.getFinishDate()%>)

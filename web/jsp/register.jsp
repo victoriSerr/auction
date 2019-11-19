@@ -71,11 +71,7 @@
                        placeholder="Password"
                        name="password1">
             </div>
-            <%--            <div class="form-group">--%>
-            <%--                <label for="password2">Повторите пароль</label><input type="password" class="form-control is-invalid"--%>
-            <%--                                                                      id="password2" name="password2">--%>
-            <%--            </div>--%>
-            <button type="submit" class="btn btn-primary">Регистрация</button>
+            <input type="submit" class="btn btn-primary" value="Регистрация">
         </form>
     </div>
 </main>

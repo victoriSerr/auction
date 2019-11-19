@@ -47,12 +47,6 @@
     <!-- Your custom styles (optional) -->
     <link rel="stylesheet" href="<%=request.getContextPath()%>/css/style.css">
 
-    <script>
-        window.onload = function (ev) {
-
-        }
-    </script>
-
 </head>
 <body>
 <div id="header"></div>
