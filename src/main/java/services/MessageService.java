@@ -1,7 +1,6 @@
 package services;
 
 import models.Message;
-import repositories.MessageRepository;
 
 import java.util.List;
 
@@ -15,4 +14,6 @@ public class MessageService {
     public void save(Message message) {
         connectBd.messageRepository.save(message);
     }
+
+
 }

@@ -7,20 +7,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c34771d-a556-4a96-a100-aafbb48c7532" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_kagkarlsson_db_scheduler_6_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_kagkarlsson_micro_jdbc_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/jsp/anotherProfile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/d9ca53fa-0d38-41a9-99cc-83fa811e9ffb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d9ca53fa-0d38-41a9-99cc-83fa811e9ffb.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/d9ca53fa-0d38-41a9-99cc-83fa811e9ffb/storage_v2/_src_/database/project.GUuQ7Q/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d9ca53fa-0d38-41a9-99cc-83fa811e9ffb/storage_v2/_src_/database/project.GUuQ7Q/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jstl_jstl_1_2.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auction.iml" beforeDir="false" afterPath="$PROJECT_DIR$/auction.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/auction/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/auction/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/auction/jsp/addLot.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/auction/jsp/addLot.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/auction/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/auction/jsp/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/auction/jsp/lot.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/auction/jsp/lot.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/auction/jsp/lots.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/auction/jsp/lots.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/auction/jsp/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/auction/jsp/main.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/auction/jsp/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/auction/jsp/profile.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/auction/jsp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/auction/jsp/register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/ConnectBd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/ConnectBd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/LotRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/LotRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/LotService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/LotService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/MessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/MessageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/AddLotServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/AddLotServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/LotServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/LotServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlets/MainServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/MainServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/MessageServlet.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlets/ProfileServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/ProfileServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlets/RegistrationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/RegistrationServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/UsersServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/UsersServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/jsp/addLot.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/addLot.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/jsp/lot.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/lot.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/jsp/lots.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/lots.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/jsp/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/main.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/jsp/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/profile.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/jsp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/register.jsp" afterDir="false" />
     </list>
@@ -81,6 +104,15 @@
         <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="project@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="project: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="sequences" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
     </expand>
     <select />
   </component>
@@ -88,14 +120,19 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Jsp File" />
         <option value="JavaScript File" />
+        <option value="Jsp File" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupGrunt">
+      <scroll-view-position x="0" y="0" />
+    </layout>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -115,6 +152,7 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="full.screen.before.presentation.mode" value="false" />
@@ -132,13 +170,13 @@
     <property name="settings.editor.selected.configurable" value="Web Contexts" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/lib" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web/images" />
       <recent name="$PROJECT_DIR$/web/jsp" />
       <recent name="$PROJECT_DIR$/web" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -156,6 +194,19 @@
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.26">
     <configuration name="ConnectBd" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="services.ConnectBd" />
+      <module name="auction" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LotService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="services.LotService" />
       <module name="auction" />
       <extension name="coverage">
         <pattern>
@@ -242,9 +293,11 @@
     <list>
       <item itemvalue="Application.ConnectBd" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.26" />
+      <item itemvalue="Application.LotService" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LotService" />
         <item itemvalue="Application.ConnectBd" />
       </list>
     </recent_temporary>
@@ -308,7 +361,11 @@
       <workItem from="1574004990582" duration="3099000" />
       <workItem from="1574061779748" duration="6411000" />
       <workItem from="1574109302774" duration="8125000" />
-      <workItem from="1574191618921" duration="11555000" />
+      <workItem from="1574191618921" duration="12508000" />
+      <workItem from="1574236403814" duration="4855000" />
+      <workItem from="1574320850327" duration="269000" />
+      <workItem from="1574419428111" duration="2559000" />
+      <workItem from="1574516130297" duration="35233000" />
     </task>
     <servers />
   </component>

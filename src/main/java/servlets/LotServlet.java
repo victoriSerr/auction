@@ -2,9 +2,11 @@ package servlets;
 
 import models.Bet;
 import models.Lot;
+import models.Message;
 import models.User;
 import services.BetService;
 import services.LotService;
+import services.MessageService;
 import services.UserService;
 
 import javax.servlet.RequestDispatcher;
@@ -21,36 +23,50 @@ import java.util.function.LongToDoubleFunction;
 
 @WebServlet("/lot/*")
 public class LotServlet extends HttpServlet {
+    private LotService lotService = new LotService();
+    private BetService betService = new BetService();
+    private UserService userService = new UserService();
+    private MessageService messageService = new MessageService();
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        LotService lotService = new LotService();
-        BetService betService = new BetService();
-        UserService userService = new UserService();
         HttpSession session = req.getSession();
-
 
         String s = req.getRequestURI();
         String lotIdH = s.split("/")[s.split("/").length - 1];
 //        System.out.println(lotIdH);
         Lot lot = lotService.findLotByHash(Integer.parseInt(lotIdH));
+        System.out.println(lot);
+        if (lot != null) {
+            Bet betLatest = betService.findLatest(lot.getId());
 
-        Timestamp startDate = lot.getStartDate();
-        if (new Timestamp(new Date().getTime()).getTime() >= startDate.getTime()) {
-            session.setAttribute("timer", lot.getFinishDate().getTime() - lot.getStartDate().getTime());
+            Timestamp finishDate = lot.getFinishDate();
+
+
+            if (betLatest != null) {
+                User userWithLatestBet = userService.findUserById(betLatest.getpBuyerId());
+                session.setAttribute("userWithLatestBet", userWithLatestBet.getLogin());
+                session.setAttribute("currentPrice", betService.findLatest(lot.getId()).getBetValue());
+            }
+//
+
+            session.setAttribute("lot", lot);
+
+            RequestDispatcher requestDispatcher = req.getRequestDispatcher("/jsp/lot.jsp");
+            requestDispatcher.forward(req, resp);
+
+
         } else {
-            session.setAttribute("notStart", startDate.getTime());
+            resp.sendError(404);
         }
-        session.setAttribute("lot", lot);
 
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        HttpSession session = req.getSession();
+        Lot lot = (Lot) session.getAttribute("lot");
         Bet betLatest = betService.findLatest(lot.getId());
-        if (betLatest != null) {
-            User userWithLatestBet = userService.findUserById(betLatest.getpBuyerId());
-            session.setAttribute("userWithLatestBet", userWithLatestBet.getLogin());
-            session.setAttribute("currentPrice", betService.findLatest(lot.getId()).getBetValue());
-        }
-
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("/jsp/lot.jsp");
-        requestDispatcher.forward(req, resp);
 
 
         Long betVal = Long.parseLong(req.getParameter("bet"));
@@ -60,13 +76,9 @@ public class LotServlet extends HttpServlet {
             Bet bet = new Bet(lot.getId(), new Timestamp(new Date().getTime()), user.getId(), betVal);
             betService.saveBet(bet);
         } else {
-            session.setAttribute("invalidBet" , Boolean.TRUE);
+            session.setAttribute("invalidBet", Boolean.TRUE);
         }
+        resp.sendRedirect(req.getContextPath() + "/lot/" + lot.getId().hashCode());
     }
 
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-
-    }
 }

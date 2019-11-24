@@ -19,11 +19,6 @@
         });
 
     </script>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta charset="UTF-8">
@@ -32,7 +27,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Material Design for Bootstrap</title>
     <!-- MDB icon -->
-    <link rel="icon" href="<%=request.getContextPath()%>/img/mdb-favicon.ico" type="image/x-icon">
+    <link rel="icon" href="<%=request.getContextPath()%>/images/logo.png" type="image/x-icon">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <!-- Bootstrap core CSS -->
@@ -41,7 +36,7 @@
     <link rel="stylesheet" href="<%=request.getContextPath()%>/css/mdb.min.css">
     <!-- Your custom styles (optional) -->
     <link rel="stylesheet" href="<%=request.getContextPath()%>/css/style.css">
-    $('.alert').alert()
+
 </head>
 <body>
 <div id="header"></div>
@@ -57,17 +52,17 @@
         <div class=" container-fluidjumbotron-fluid" style="padding: 3%">
             <h2>Добавить лот</h2>
             <br>
-            <form>
+            <form id="form" method="post">
                 <div>
                     <label for="lot-name">Название</label>
-                    <input type="text" class="form-control" id='lot-name' name="name">
+                    <input type="text" class="form-control" id="lot-name" name="name" required>
                     <br>
                     <label for="lot-description">Описание</label>
                     <textarea name="description" class="form-control" id="lot-description"></textarea>
                 </div>
                 <label>
                     Фотографии
-                    <input type="file" class="form-control-file" name="file" value="Загрузить" multiple>
+                    <input type="file" id="files" class="form-control-file" name="file" value="Загрузить" multiple required>
                     <br>
                 </label>
                 <br>
@@ -97,18 +92,15 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text">&#8381;</span>
                     </div>
-                    <input type="number" class="form-control" name="startPrice" id="startPrice">
+                    <input type="number" class="form-control" name="startPrice" id="startPrice" required>
                 </div>
                 <br>
-                <input type="submit" value="save" class="btn btn-outline-primary waves-effect" formmethod="post"
-                       formaction="<%=request.getContextPath()%>/"
+                <input type="submit" value="save" class="btn btn-outline-primary waves-effect"
                        formenctype="multipart/form-data">
             </form>
         </div>
     </div>
 </main>
-
-
 <div id="footer"></div>
 
 </body>

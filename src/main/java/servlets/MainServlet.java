@@ -15,13 +15,17 @@ import java.util.List;
 
 @WebServlet("")
 public class MainServlet extends HttpServlet {
+    private LotService lotService = new LotService();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         RequestDispatcher dispatcher = req.getRequestDispatcher("/jsp/lots.jsp");
-        LotService lotService = new LotService();
         List<Lot> lots = lotService.getLotWithProduct();
         req.getSession().setAttribute("lots", lots);
         dispatcher.forward(req, resp);
+
+        String search = req.getParameter("search");
+        System.out.println(search);
 //        System.out.println(req.getSession().getAttribute("successR"));
     }
 
@@ -29,4 +33,6 @@ public class MainServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getRequestDispatcher("/jsp/lots.jsp").forward(req, resp);
     }
+
+
 }

@@ -2,8 +2,10 @@ package servlets;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import repositories.UserRepository;
 import services.ConnectBd;
 import models.User;
+import services.UserService;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -13,8 +15,7 @@ import java.io.IOException;
 
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
-    private ConnectBd connectBd = new ConnectBd();
-
+    private UserService userService = new UserService();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 //        resp.sendRedirect(req.getContextPath() + "/jsp/login.jsp");
@@ -34,7 +35,7 @@ public class LoginServlet extends HttpServlet {
 
         PasswordEncoder encoder = new BCryptPasswordEncoder();
 
-        User user = connectBd.userRepository.findByLogin(login);
+        User user = userService.findUserByLogin(login);
 
         if (user == null) {
             req.getSession().setAttribute("wrongLogin", "wrong login");

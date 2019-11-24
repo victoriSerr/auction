@@ -25,7 +25,6 @@
             $("#footer").load("<%=request.getContextPath()%>/jsp/main.jsp #main_footer");
         });
     </script>
-    <link rel="stylesheet" href="../css/style.css">
     <%--    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>--%>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
             integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
@@ -37,17 +36,11 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Material Design for Bootstrap</title>
     <!-- MDB icon -->
-    <link rel="icon" href="<%=request.getContextPath()%>/img/mdb-favicon.ico" type="image/x-icon">
+    <link rel="icon" href="<%=request.getContextPath()%>/images/logo.png" type="image/x-icon">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <!-- Bootstrap core CSS -->
@@ -57,11 +50,9 @@
     <!-- Your custom styles (optional) -->
     <link rel="stylesheet" href="<%=request.getContextPath()%>/css/style.css">
 
-    <% Lot lot = (Lot) request.getSession().getAttribute("lot");%>
-    <script type="text/javascript">
-        // здесь нужная дата в формате гггг-мм-дд чч:мм:сс
-        var deadline = '<%=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(lot.getFinishDate())%>';
-        // var deadline = '2020-08-20 00:00:00';
+    <% Lot lot = (Lot) request.getSession().getAttribute("lot");
+        System.out.println(lot);%>
+    <script>
 
     </script>
 </head>
@@ -84,7 +75,7 @@
                 <p>Текущая цена:<%=s%> &#8381;
                 </p>
 
-                <form method="get">
+                <form method="post">
                     <label for="bet_input">Минимальная ставка : </label>
 
                     <input id='bet_input' type="number" name="bet" class="form-control" required
@@ -93,7 +84,8 @@
                     <button type="submit" id="betBtn"
                             class="btn btn-orange" <%if (request.getSession().getAttribute("isSignIn") == null) {%>
                             formaction="${pageContext.request.contextPath}/login" <%} else {%>
-                            onClick="window.location.reload()"<%}%> >Сделать ставку
+                            onclick="window.location.reload()" "<%}%> >
+                        Сделать ставку
                     </button>
                 </form>
                 <hr>
@@ -106,7 +98,8 @@
 
                 <div>
                     <span> крайняя ставка от <a
-                            href="${pageContext.request.contextPath}/user/<%=request.getSession().getAttribute("userWithLatestBet")%>"><%=request.getSession().getAttribute("userWithLatestBet")%> </a>
+                            href="${pageContext.request.contextPath}/user/<%=request.getSession().getAttribute("userWithLatestBet")%>">
+                        <%=request.getSession().getAttribute("userWithLatestBet")%> </a>
                         <%request.getSession().removeAttribute("userWithLatestBet");%>
                             <span style="color: red">
                                 <div class="countdown">
@@ -120,14 +113,16 @@
                                     <span> s </span>
                                 </div>
                                     <script type="text/javascript">
-                                    $('.countdown').downCount({
-                                            date: deadline
-                                        },
-                                        function () {
-                                            /* действие после завершения таймера */
-                                            $('#bet_input').removeAttr("value").addClass("disabled").attr("disabled", 'disabled');
-                                            $('#betBtn').attr("disabled", 'disabled');
-                                        });
+                                                var deadline = '<%=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(lot.getFinishDate())%>';
+
+                                                $('.countdown').downCount({
+                                                        date: deadline
+                                                    },
+                                                    function () {
+                                                        /* действие после завершения таймера */
+                                                        $('#bet_input').removeAttr("value").addClass("disabled").attr("disabled", 'disabled');
+                                                        $('#betBtn').attr("disabled", 'disabled');
+                                                    });
                                     </script>
                             </span>(<%=lot.getFinishDate()%>)
                     </span>

@@ -20,12 +20,16 @@ import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@WebServlet("/add-new-lot")
+@WebServlet(urlPatterns = "/add-new-lot", name = "AddLot")
 @MultipartConfig(fileSizeThreshold = 6291456, // 6 MB
         maxFileSize = 10485760L, // 10 MB
         maxRequestSize = 20971520L // 20 MB
 )
 public class AddLotServlet extends HttpServlet {
+    private UserService userService = new UserService();
+    private LotService lotService = new LotService();
+    private ProductService productService = new ProductService();
+
 
     private static final String UPLOAD_DIR = "uploads";
     @Override
@@ -49,9 +53,6 @@ public class AddLotServlet extends HttpServlet {
         resp.setCharacterEncoding("UTF-8");
 
         req.setCharacterEncoding("UTF-8");
-        UserService userService = new UserService();
-        LotService lotService = new LotService();
-        ProductService productService = new ProductService();
 
         HttpSession session = req.getSession();
         User user = userService.findUserByLogin(session.getAttribute("login").toString());
@@ -91,16 +92,22 @@ public class AddLotServlet extends HttpServlet {
         String finishDate = req.getParameter("fdate") + " " + req.getParameter("ftime") + ":00";
         String description = req.getParameter("description");
         String name = req.getParameter("name");
-        Long startPrice = Long.parseLong(req.getParameter("startPrice"));
+        String startPrice = req.getParameter("startPrice");
+//        System.out.println(name);
 
-        Product product = new Product(startPrice, fileNames, name, description);
-        productService.save(product);
+        if (!name.equals("") && !startPrice.equals("")) {
+            Product product = new Product(Long.parseLong(startPrice), fileNames, name, description);
+            productService.save(product);
 
-        Lot lot = new Lot(user.getId(), false, null, Timestamp.valueOf(startDate), Timestamp.valueOf(finishDate), false, product.getId());
-        lotService.save(lot);
+            Lot lot = new Lot(user.getId(), false, null, Timestamp.valueOf(startDate), Timestamp.valueOf(finishDate), false, product.getId());
+            lotService.save(lot);
 
 //        RequestDispatcher requestDispatcher = req.getRequestDispatcher("");
 //        requestDispatcher.forward(req, resp);
+            resp.sendRedirect(req.getContextPath() + "/");
+        } else {
+            resp.getWriter().println("wrong data");
+        }
 
     }
 }

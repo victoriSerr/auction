@@ -1,5 +1,7 @@
 package services;
 
+import dto.MessageDto;
+import models.Message;
 import models.User;
 
 import java.util.List;
@@ -26,5 +28,9 @@ public class UserService {
 
     public User findUserById (Long id ){
         return connectBd.userRepository.find(id).get();
+    }
+
+    public MessageDto from(Message message) {
+        return new MessageDto(findUserById(message.getFromUserId()).getLogin(), findUserById(message.getToUserId()).getLogin(), message.getMessage());
     }
 }

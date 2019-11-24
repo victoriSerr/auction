@@ -1,5 +1,6 @@
 <%@ page import="models.Lot" %>
-<%@ page import="java.util.List" %><%--
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.regex.Pattern" %><%--
   Created by IntelliJ IDEA.
   User: victory
   Date: 06.11.2019
@@ -21,23 +22,15 @@
         });
 
     </script>
-    <%--        <link rel="stylesheet" href="css/style.css">--%>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-          crossorigin="anonymous">
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/style.css">
+     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Material Design for Bootstrap</title>
     <!-- MDB icon -->
-    <link rel="icon" href="<%=request.getContextPath()%>/img/mdb-favicon.ico" type="image/x-icon">
+    <link rel="icon" href="<%=request.getContextPath()%>/images/logo.png" type="image/x-icon">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <!-- Bootstrap core CSS -->
@@ -55,7 +48,7 @@
 
         <div class="row" style="margin: 30px 0 30px 0; width: 100%; top: 30px;">
 
-            <% List<Lot> lots = (List<Lot>) request.getSession().getAttribute("lots"); %>
+            <% List<Lot> lots = (List<Lot>) request.getSession().getAttribute("lots");%>
             <%for (Lot lot : lots) {%>
 
 
@@ -68,7 +61,8 @@
         width: 360px;">
                 <div class="card" style="position: absolute; height: 503px;width: 360px; background: #f5f5f5;">
                     <div class="card-img-top" alt="..."
-                         style="  background: url('<%=request.getContextPath()%>/uploads/<%=lot.getProduct().getImages().get(0)%>') no-repeat center; height: 100%; background-size: contain; "></div>
+                         style="  background: url('<%=request.getContextPath()%>/uploads/<%=lot.getProduct().getImages().get(0)%>')
+                                 no-repeat center; height: 100%; background-size: contain; "></div>
                     <div class="card-body" style="border: double red;">
                         <h5 class="card-title"
                             style="white-space: nowrap;width: 312px;overflow: hidden;text-overflow: ellipsis;"><%=lot.getProduct().getName()%>

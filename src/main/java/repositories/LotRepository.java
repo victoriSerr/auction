@@ -16,6 +16,7 @@ public class LotRepository implements CrudRepository<Lot, Long> {
 
     private final String SQL_FIND_LOT_USERA = "select * from lot where buyer_id = ?;";
     private final String SQL_FIND_LOT_BY_ID = "select * from lot where id = ?;";
+    private final String SQL_UPDATE_LOT = "update lot set status = ?, buyer_id = ?, transaction_status = ? where id = ?;";
     public LotRepository(Connection connection) {
         this.connection = connection;
     }
@@ -69,6 +70,22 @@ public class LotRepository implements CrudRepository<Lot, Long> {
 
     @Override
     public void update(Lot model) {
+        try {
+            PreparedStatement statement = connection.prepareStatement(SQL_UPDATE_LOT);
+
+            statement.setBoolean(1, model.getStatus());
+            statement.setLong(2, model.getBuyerId());
+            statement.setBoolean(3, model.getTransactionStatus());
+            statement.setLong(4, model.getId());
+
+            int affectedRows = statement.executeUpdate();
+            if (affectedRows == 0) {
+                throw new SQLException();
+            }
+            statement.close();
+        } catch (SQLException e) {
+            throw new IllegalStateException(e);
+        }
 
     }
 
@@ -81,7 +98,6 @@ public class LotRepository implements CrudRepository<Lot, Long> {
     public Optional<Lot> find(Long id) {
         Lot lot = null;
         try {
-            //в PreparedStatement statement посылается строка SQL_FIND_USER, содержащая SQL запрос на поиск пользователя по id
             PreparedStatement statement = connection.prepareStatement(SQL_FIND_LOT_BY_ID);
 
             statement.setLong(1, id);
@@ -98,12 +114,9 @@ public class LotRepository implements CrudRepository<Lot, Long> {
     }
 
     public List<Lot> findUsersLot(Long id) {
-        List<Lot> result = null;
+        List<Lot> result = new ArrayList<>();
         try {
-            //в PreparedStatement statement посылается строка SQL_FIND_USER, содержащая SQL запрос на поиск пользователя по id
-
             PreparedStatement statement = connection.prepareStatement(SQL_FIND_LOT_USERA);
-            //посылается соответствующее значение на место вопроса
             statement.setLong(1, id);
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {

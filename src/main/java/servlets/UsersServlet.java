@@ -14,23 +14,39 @@ import java.io.IOException;
 
 @WebServlet("/user/*")
 public class UsersServlet extends HttpServlet {
+    private UserService userService = new UserService();
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         String s = req.getRequestURI();
         String login = s.split("/")[s.split("/").length - 1];
-        req.getSession().setAttribute("currLogin", login);
-        req.getRequestDispatcher("/jsp/profile.jsp").forward(req, resp);
+        if (userService.findUserByLogin(login) != null) {
+            if (login.equals(req.getSession().getAttribute("login"))) {
+                resp.sendRedirect(req.getContextPath() + "/profile");
+            } else {
+                req.getSession().setAttribute("currLogin", login);
+                req.getRequestDispatcher("/jsp/anotherProfile.jsp").forward(req, resp);
+            }
+        } else {
+            resp.sendError(404);
+        }
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("/jsp/profile.jsp").forward(req, resp);
+        resp.setContentType("text/html");
+        resp.setCharacterEncoding("UTF-8");
+
+        req.setCharacterEncoding("UTF-8");
+
+        req.getRequestDispatcher("/jsp/anotherProfile.jsp").forward(req, resp);
         String message = req.getParameter("message");
         String s = req.getRequestURI();
         String loginTo = s.split("/")[s.split("/").length - 1];
-        String login = (String)req.getSession().getAttribute("login");
-        User fromUser = new UserService().findUserByLogin(login);
-        User toUser = new UserService().findUserByLogin(loginTo);
+        String login = (String) req.getSession().getAttribute("login");
+        User fromUser = userService.findUserByLogin(login);
+        User toUser = userService.findUserByLogin(loginTo);
 
         if (login != null) {
             Message message1 = new Message(fromUser.getId(), toUser.getId(), message);
