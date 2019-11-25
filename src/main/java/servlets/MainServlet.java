@@ -25,14 +25,11 @@ public class MainServlet extends HttpServlet {
         dispatcher.forward(req, resp);
 
         String search = req.getParameter("search");
-        System.out.println(search);
-//        System.out.println(req.getSession().getAttribute("successR"));
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getRequestDispatcher("/jsp/lots.jsp").forward(req, resp);
     }
-
 
 }

@@ -92,7 +92,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text">&#8381;</span>
                     </div>
-                    <input type="number" class="form-control" name="startPrice" id="startPrice" required>
+                    <input type="number" class="form-control" name="startPrice" id="startPrice" min="1" required>
                 </div>
                 <br>
                 <input type="submit" value="save" class="btn btn-outline-primary waves-effect"

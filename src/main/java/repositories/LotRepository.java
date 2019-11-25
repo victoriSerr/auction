@@ -4,6 +4,7 @@ import models.Lot;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -17,6 +18,8 @@ public class LotRepository implements CrudRepository<Lot, Long> {
     private final String SQL_FIND_LOT_USERA = "select * from lot where buyer_id = ?;";
     private final String SQL_FIND_LOT_BY_ID = "select * from lot where id = ?;";
     private final String SQL_UPDATE_LOT = "update lot set status = ?, buyer_id = ?, transaction_status = ? where id = ?;";
+
+
     public LotRepository(Connection connection) {
         this.connection = connection;
     }
@@ -71,12 +74,17 @@ public class LotRepository implements CrudRepository<Lot, Long> {
     @Override
     public void update(Lot model) {
         try {
-            PreparedStatement statement = connection.prepareStatement(SQL_UPDATE_LOT);
+            PreparedStatement statement = connection.prepareStatement(SQL_UPDATE_LOT, Statement.RETURN_GENERATED_KEYS);
 
             statement.setBoolean(1, model.getStatus());
-            statement.setLong(2, model.getBuyerId());
+            if (model.getBuyerId() == null) {
+                statement.setNull(2, Types.BIGINT);
+            } else {
+                statement.setLong(2, model.getBuyerId());
+            }
             statement.setBoolean(3, model.getTransactionStatus());
             statement.setLong(4, model.getId());
+
 
             int affectedRows = statement.executeUpdate();
             if (affectedRows == 0) {
@@ -103,7 +111,7 @@ public class LotRepository implements CrudRepository<Lot, Long> {
             statement.setLong(1, id);
 
             ResultSet resultSet = statement.executeQuery();
-            if(resultSet.next())
+            if (resultSet.next())
                 lot = lotRowMapper.mapRow(resultSet);
             statement.close();
         } catch (SQLException e) {

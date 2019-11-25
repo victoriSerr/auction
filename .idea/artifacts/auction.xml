@@ -6,6 +6,9 @@
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="auction" />
+          <element id="library" level="application" name="bootstrap" />
+          <element id="library" level="application" name="jquery-3.3.1.slim" />
+          <element id="library" level="application" name="popper" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="postgresql-42.2.5" />
@@ -18,6 +21,7 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-core:5.2.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.2.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.2.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.7" />
         </element>
       </element>
     </root>

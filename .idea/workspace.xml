@@ -7,45 +7,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c34771d-a556-4a96-a100-aafbb48c7532" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_kagkarlsson_db_scheduler_6_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_kagkarlsson_micro_jdbc_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/jsp/anotherProfile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d9ca53fa-0d38-41a9-99cc-83fa811e9ffb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d9ca53fa-0d38-41a9-99cc-83fa811e9ffb.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d9ca53fa-0d38-41a9-99cc-83fa811e9ffb/storage_v2/_src_/database/project.GUuQ7Q/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d9ca53fa-0d38-41a9-99cc-83fa811e9ffb/storage_v2/_src_/database/project.GUuQ7Q/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jstl_jstl_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/auction.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/auction.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_kagkarlsson_db_scheduler_6_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_kagkarlsson_micro_jdbc_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/servlet_api1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auction.iml" beforeDir="false" afterPath="$PROJECT_DIR$/auction.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/auction/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/auction/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/auction/jsp/addLot.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/auction/jsp/addLot.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/auction/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/auction/jsp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/auction/jsp/lot.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/auction/jsp/lot.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/auction/jsp/lots.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/auction/jsp/lots.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/auction/jsp/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/auction/jsp/main.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/auction/jsp/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/auction/jsp/profile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/auction/jsp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/auction/jsp/register.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repositories/LotRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/LotRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/BetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/BetService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/services/LotService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/LotService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/MessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/MessageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlets/AddLotServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/AddLotServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/LoginServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlets/LotServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/LotServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlets/MainServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/MainServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/MessageServlet.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlets/ProfileServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/ProfileServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlets/RegistrationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/RegistrationServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlets/UsersServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/UsersServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/jsp/addLot.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/addLot.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/lot.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/lot.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/lots.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/lots.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/jsp/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/main.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/profile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/register.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -229,6 +211,7 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Unnamed_auction" />
+        <option name="JNDI_PORT" value="1234" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -292,8 +275,8 @@
     </configuration>
     <list>
       <item itemvalue="Application.ConnectBd" />
-      <item itemvalue="Tomcat Server.Tomcat 9.0.26" />
       <item itemvalue="Application.LotService" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.26" />
     </list>
     <recent_temporary>
       <list>
@@ -365,7 +348,7 @@
       <workItem from="1574236403814" duration="4855000" />
       <workItem from="1574320850327" duration="269000" />
       <workItem from="1574419428111" duration="2559000" />
-      <workItem from="1574516130297" duration="35233000" />
+      <workItem from="1574516130297" duration="56711000" />
     </task>
     <servers />
   </component>

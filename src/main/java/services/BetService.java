@@ -3,7 +3,7 @@ package services;
 import models.Bet;
 
 public class BetService {
-    ConnectBd connectBd = new ConnectBd();
+    private ConnectBd connectBd = new ConnectBd();
 
     public void saveBet(Bet bet) {
         connectBd.betRepository.save(bet);

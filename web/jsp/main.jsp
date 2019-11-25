@@ -74,7 +74,8 @@
 
             <form class="form-inline">
                 <div class="md-form my-0">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="search">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"
+                           name="search">
                 </div>
             </form>
         </div>
@@ -87,7 +88,7 @@
 <footer id='main_footer' class="page-footer font-small blue pt-4 mt-4">
 
     <div class="footer-copyright text-center py-3">© 2019 Copyright:
-        <a href="https://mdbootstrap.com/education/bootstrap/"> kpfu.ru</a>
+        <a href="https://kpfu.ru/"> kpfu.ru</a>
     </div>
     <!-- Copyright -->
 

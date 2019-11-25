@@ -40,8 +40,6 @@ public class ProfileServlet extends HttpServlet {
 
 
             req.getSession().setAttribute("messages", listDto);
-
-            System.out.println(user.getLogin());
             List<Lot> lotList = lotService.findUserLots(user.getId());
 
             req.getSession().setAttribute("lots", lotList);

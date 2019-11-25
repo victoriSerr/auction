@@ -34,9 +34,7 @@ public class LotServlet extends HttpServlet {
 
         String s = req.getRequestURI();
         String lotIdH = s.split("/")[s.split("/").length - 1];
-//        System.out.println(lotIdH);
         Lot lot = lotService.findLotByHash(Integer.parseInt(lotIdH));
-        System.out.println(lot);
         if (lot != null) {
             Bet betLatest = betService.findLatest(lot.getId());
 
@@ -51,6 +49,7 @@ public class LotServlet extends HttpServlet {
 //
 
             session.setAttribute("lot", lot);
+
 
             RequestDispatcher requestDispatcher = req.getRequestDispatcher("/jsp/lot.jsp");
             requestDispatcher.forward(req, resp);
@@ -70,7 +69,6 @@ public class LotServlet extends HttpServlet {
 
 
         Long betVal = Long.parseLong(req.getParameter("bet"));
-        System.out.println(betVal);
         if (betVal > (betLatest != null ? betLatest.getBetValue() : lot.getProduct().getPrice())) {
             User user = new UserService().findUserByLogin((String) session.getAttribute("login"));
             Bet bet = new Bet(lot.getId(), new Timestamp(new Date().getTime()), user.getId(), betVal);

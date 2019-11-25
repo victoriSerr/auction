@@ -40,7 +40,7 @@ public class UsersServlet extends HttpServlet {
 
         req.setCharacterEncoding("UTF-8");
 
-        req.getRequestDispatcher("/jsp/anotherProfile.jsp").forward(req, resp);
+
         String message = req.getParameter("message");
         String s = req.getRequestURI();
         String loginTo = s.split("/")[s.split("/").length - 1];
@@ -52,6 +52,8 @@ public class UsersServlet extends HttpServlet {
             Message message1 = new Message(fromUser.getId(), toUser.getId(), message);
             new MessageService().save(message1);
         }
+
+        doGet(req, resp);
 
 
 //        System.out.println(message);

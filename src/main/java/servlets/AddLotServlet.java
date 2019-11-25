@@ -93,7 +93,6 @@ public class AddLotServlet extends HttpServlet {
         String description = req.getParameter("description");
         String name = req.getParameter("name");
         String startPrice = req.getParameter("startPrice");
-//        System.out.println(name);
 
         if (!name.equals("") && !startPrice.equals("")) {
             Product product = new Product(Long.parseLong(startPrice), fileNames, name, description);
@@ -101,6 +100,7 @@ public class AddLotServlet extends HttpServlet {
 
             Lot lot = new Lot(user.getId(), false, null, Timestamp.valueOf(startDate), Timestamp.valueOf(finishDate), false, product.getId());
             lotService.save(lot);
+            req.getSession().getServletContext().setAttribute("lot", lot);
 
 //        RequestDispatcher requestDispatcher = req.getRequestDispatcher("");
 //        requestDispatcher.forward(req, resp);

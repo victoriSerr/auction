@@ -44,8 +44,7 @@ public class RegistrationServlet extends HttpServlet {
             req.getSession().setAttribute("successR", Boolean.TRUE);
             resp.sendRedirect(req.getContextPath() + "/");
         } else {
-            RequestDispatcher requestDispatcher = req.getRequestDispatcher("/registration");
-            requestDispatcher.forward(req, resp);
+            resp.sendRedirect(req.getContextPath() + "/registration");
         }
 
     }
